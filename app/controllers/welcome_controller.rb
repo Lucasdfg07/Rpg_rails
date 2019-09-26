@@ -1,7 +1,7 @@
 class WelcomeController < ApplicationController
   def index
-    @fase_1_1 = 5.times.map
-    @fase_1_2 = 5.times.map
+    @fase_1_1 = 10.times.map
+    @fase_1_2 = 10.times.map
 
     @moedas_totais = CollectedCoin.where("user_id = "+session[:id_user].to_s).count
     @bowser_total = KilledMonster.where("user_id = "+session[:id_user].to_s+" AND monster_id = 2").count(:monster_id)
