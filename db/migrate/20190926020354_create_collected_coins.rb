@@ -1,0 +1,8 @@
+class CreateCollectedCoins < ActiveRecord::Migration[5.2]
+  def change
+    create_table :collected_coins do |t|
+      t.integer :user_id
+      t.integer :value
+    end
+  end
+end

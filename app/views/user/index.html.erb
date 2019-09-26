@@ -1,0 +1,13 @@
+<h3>Comece o jogo!</h3>
+
+<br />
+
+<%= form_with(url: {:action => "create"}, local: true) do |f| %>
+  <div class="form-group textarea-group">
+    <%= f.text_field :nome, class: "form-control", placeholder: "Digite seu nome para começar!", required: true %>
+  </div>
+
+  <div class="form-group">
+    <%= f.submit "Entrar", class: 'btn btn-primary' %>
+  </div>
+<% end %>

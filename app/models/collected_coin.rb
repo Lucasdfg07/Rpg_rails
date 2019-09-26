@@ -1,0 +1,2 @@
+class CollectedCoin < ApplicationRecord
+end

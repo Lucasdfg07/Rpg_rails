@@ -1,0 +1,33 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+table {
+  box-shadow: -2px 2px 5px rgba(220,220,220,0.5);
+  margin-top: 50px;
+}
+td {
+  border: 1px solid rgba(10,10,10,0.4);
+}
+img {
+  width: 30px;
+  height: 30px;
+}
+.panel {
+  margin-top:30px;
+  box-shadow: -2px 2px 15px rgba(200,200,200,0.5);
+  padding: 20px;
+  width: 80%;
+  text-align: center;
+}
+.panel-body b {
+  display: block;
+}
+.contagem_moeda {
+  color: rgb(200,200,0);
+}
+.contagem_monstro {
+  color: gray;
+}
+.contagem_morte {
+  color: red;
+}

@@ -1,0 +1,2 @@
+class Death < ApplicationRecord
+end
