@@ -17,33 +17,33 @@ class WelcomeController < ApplicationController
     end
 
 
-      if @moedas_totais >= 1 && @bowser_total >= 1 && @turtle_total >= 1
-        if @mortes_totais >= 10
-          redirect_to user_index_path, alert: 'Você perdeu o jogo! Mais sorte da próxima vez.'
-        end
-        @fase_inicial = 2;
-        else if @moedas_totais >= 100 && @bowser_total >= 100 && @turtle_total >= 100
-          if @mortes_totais >= 25
-            redirect_to user_index_path, alert: 'Você perdeu o jogo! Mais sorte da próxima vez.'
-          end
-          @fase_inicial = 3;
-          else if @moedas_totais >= 1000 && @bowser_total >= 1000 && @turtle_total >= 1000
-            if @mortes_totais >= 50
-              redirect_to user_index_path, alert: 'Você perdeu o jogo! Mais sorte da próxima vez.'
-            end
-            @fase_inicial = 4;
-            else if @moedas_totais >= 10000 && @bowser_total >= 10000 && @turtle_total >= 10000
-              if @mortes_totais >= 75
-                redirect_to user_index_path, alert: 'Você perdeu o jogo! Mais sorte da próxima vez.'
-              end
-              @fase_inicial = 5;
-              else if @moedas_totais >= 100000 && @bowser_total >= 100000 && @turtle_total >= 100000
-               redirect_to user_index_path, notice: 'Você ganhou o jogo! Parabéns'
-             end
-           end
-         end
-       end
-     end
+    if @moedas_totais >= 1 && @bowser_total >= 1 && @turtle_total >= 1
+      if @mortes_totais >= 10
+        redirect_to user_index_path, alert: 'Você perdeu o jogo! Mais sorte da próxima vez.'
+      end
+
+      @fase_inicial = 2;
+    elsif @moedas_totais >= 100 && @bowser_total >= 100 && @turtle_total >= 100
+      if @mortes_totais >= 25
+        redirect_to user_index_path, alert: 'Você perdeu o jogo! Mais sorte da próxima vez.'
+      end
+
+      @fase_inicial = 3;
+    elsif @moedas_totais >= 1000 && @bowser_total >= 1000 && @turtle_total >= 1000
+      if @mortes_totais >= 50
+        redirect_to user_index_path, alert: 'Você perdeu o jogo! Mais sorte da próxima vez.'
+      end
+
+      @fase_inicial = 4;
+    elsif @moedas_totais >= 10000 && @bowser_total >= 10000 && @turtle_total >= 10000
+      if @mortes_totais >= 75
+        redirect_to user_index_path, alert: 'Você perdeu o jogo! Mais sorte da próxima vez.'
+      end
+
+      @fase_inicial = 5;
+    elsif @moedas_totais >= 100000 && @bowser_total >= 100000 && @turtle_total >= 100000
+     redirect_to user_index_path, notice: 'Você ganhou o jogo! Parabéns'
+    end
   end
 
   def moeda

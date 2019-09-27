@@ -9058,3 +9058,1270 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 171ms (Views: 153.0ms | ActiveRecord: 2.2ms)
 
 
+Started GET "/" for 127.0.0.1 at 2019-09-26 22:42:55 -0300
+  [1m[35m (54.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/lucas/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/lucas/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UserController#index as HTML
+  Rendering user/index.html.erb within layouts/application
+  Rendered user/index.html.erb within layouts/application (44.5ms)
+Completed 200 OK in 4051ms (Views: 4024.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user/create" for 127.0.0.1 at 2019-09-26 22:43:03 -0300
+Processing by UserController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TBoMn2n0UxpVfIjz7Lkv3cbXg7MOveQdn9z3X6/5kiiVV6Q1no3O27pVibJw5pmveeTy2dxakWg+cIIs6wpOlg==", "nome"=>"Luks", "commit"=>"Entrar"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_controller.rb:9
+  [1m[36mUser Create (52.1ms)[0m  [1m[32mINSERT INTO `users` VALUES ()[0m
+  ↳ app/controllers/user_controller.rb:9
+  [1m[35m (86.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_controller.rb:9
+Redirected to http://localhost:3000/welcome/index
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` DESC LIMIT 1[0m
+  ↳ app/controllers/user_controller.rb:15
+Completed 302 Found in 256ms (ActiveRecord: 153.5ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2019-09-26 22:43:03 -0300
+Processing by WelcomeController#index as HTML
+  [1m[35m (26.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `collected_coins` WHERE (user_id = 16)[0m
+  ↳ app/controllers/welcome_controller.rb:6
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 16 AND monster_id = 2)[0m
+  ↳ app/controllers/welcome_controller.rb:7
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 16 AND monster_id = 1)[0m
+  ↳ app/controllers/welcome_controller.rb:8
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `deaths` WHERE (user_id = 16)[0m
+  ↳ app/controllers/welcome_controller.rb:9
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 83ms (ActiveRecord: 38.1ms)
+
+
+  
+SyntaxError (/home/lucas/Github/Rpg_rails/app/views/welcome/index.html.erb:87: syntax error, unexpected end-of-input, expecting keyword_end
+          end
+             ^):
+  
+app/views/welcome/index.html.erb:87: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/welcome/index" for 127.0.0.1 at 2019-09-26 22:43:31 -0300
+Processing by WelcomeController#index as HTML
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `collected_coins` WHERE (user_id = 16)[0m
+  ↳ app/controllers/welcome_controller.rb:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 16 AND monster_id = 2)[0m
+  ↳ app/controllers/welcome_controller.rb:7
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 16 AND monster_id = 1)[0m
+  ↳ app/controllers/welcome_controller.rb:8
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `deaths` WHERE (user_id = 16)[0m
+  ↳ app/controllers/welcome_controller.rb:9
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.9ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 1.8ms)
+
+
+  
+SyntaxError (/home/lucas/Github/Rpg_rails/app/views/welcome/index.html.erb:88: syntax error, unexpected end-of-input, expecting keyword_end
+          end
+             ^):
+  
+app/views/welcome/index.html.erb:88: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/welcome/index" for 127.0.0.1 at 2019-09-26 22:43:36 -0300
+Processing by WelcomeController#index as HTML
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `collected_coins` WHERE (user_id = 16)[0m
+  ↳ app/controllers/welcome_controller.rb:6
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 16 AND monster_id = 2)[0m
+  ↳ app/controllers/welcome_controller.rb:7
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 16 AND monster_id = 1)[0m
+  ↳ app/controllers/welcome_controller.rb:8
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `deaths` WHERE (user_id = 16)[0m
+  ↳ app/controllers/welcome_controller.rb:9
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (78.0ms)
+Completed 200 OK in 152ms (Views: 141.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2019-09-26 22:43:54 -0300
+Processing by WelcomeController#index as HTML
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM `collected_coins` WHERE (user_id = 16)[0m
+  ↳ app/controllers/welcome_controller.rb:6
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 16 AND monster_id = 2)[0m
+  ↳ app/controllers/welcome_controller.rb:7
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 16 AND monster_id = 1)[0m
+  ↳ app/controllers/welcome_controller.rb:8
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `deaths` WHERE (user_id = 16)[0m
+  ↳ app/controllers/welcome_controller.rb:9
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (83.7ms)
+Completed 200 OK in 183ms (Views: 171.3ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/welcome/moeda" for 127.0.0.1 at 2019-09-26 22:43:57 -0300
+Processing by WelcomeController#moeda as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` DESC LIMIT 1[0m
+  ↳ app/controllers/welcome_controller.rb:52
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/welcome_controller.rb:55
+  [1m[36mCollectedCoin Create (0.9ms)[0m  [1m[32mINSERT INTO `collected_coins` (`user_id`, `value`) VALUES (16, 10)[0m
+  ↳ app/controllers/welcome_controller.rb:55
+  [1m[35m (156.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/welcome_controller.rb:55
+Redirected to http://localhost:3000/welcome/index
+Completed 302 Found in 175ms (ActiveRecord: 159.5ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2019-09-26 22:43:57 -0300
+Processing by WelcomeController#index as HTML
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `collected_coins` WHERE (user_id = 16)[0m
+  ↳ app/controllers/welcome_controller.rb:6
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 16 AND monster_id = 2)[0m
+  ↳ app/controllers/welcome_controller.rb:7
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 16 AND monster_id = 1)[0m
+  ↳ app/controllers/welcome_controller.rb:8
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `deaths` WHERE (user_id = 16)[0m
+  ↳ app/controllers/welcome_controller.rb:9
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (57.9ms)
+Completed 200 OK in 122ms (Views: 114.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2019-09-26 22:45:47 -0300
+Processing by WelcomeController#index as HTML
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `collected_coins` WHERE (user_id = 16)[0m
+  ↳ app/controllers/welcome_controller.rb:6
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 16 AND monster_id = 2)[0m
+  ↳ app/controllers/welcome_controller.rb:7
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 16 AND monster_id = 1)[0m
+  ↳ app/controllers/welcome_controller.rb:8
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `deaths` WHERE (user_id = 16)[0m
+  ↳ app/controllers/welcome_controller.rb:9
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (419.8ms)
+Completed 500 Internal Server Error in 432ms (ActiveRecord: 2.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `elseif' for #<#<Class:0x00007faf1a5741a0>:0x00007faf195956a8>):
+    12:             <% @fase_1_2.each do %>
+    13:               <% if Random.rand(4) == 0 %>
+    14:                 <td><%= link_to image_tag('coins.png'), action: 'moeda'%></td>
+    15:               <% elseif Random.rand(4) == 1 %>
+    16:                 <td><%= link_to image_tag('bowser.png'), {action: 'monstro', monster: 'bowser'}%></td>
+    17:               <% elseif Random.rand(4) == 2 %>
+    18:                 <td><%= link_to image_tag('turtle.png'), action: 'monstro', monster: 'turtle' %></td>
+  
+app/views/welcome/index.html.erb:15:in `block (2 levels) in _app_views_welcome_index_html_erb___2534175291674433504_70195010649420'
+app/views/welcome/index.html.erb:12:in `times'
+app/views/welcome/index.html.erb:12:in `each'
+app/views/welcome/index.html.erb:12:in `map'
+app/views/welcome/index.html.erb:12:in `each'
+app/views/welcome/index.html.erb:12:in `block in _app_views_welcome_index_html_erb___2534175291674433504_70195010649420'
+app/views/welcome/index.html.erb:10:in `times'
+app/views/welcome/index.html.erb:10:in `each'
+app/views/welcome/index.html.erb:10:in `map'
+app/views/welcome/index.html.erb:10:in `each'
+app/views/welcome/index.html.erb:10:in `_app_views_welcome_index_html_erb___2534175291674433504_70195010649420'
+Started GET "/welcome/index" for 127.0.0.1 at 2019-09-26 22:47:07 -0300
+Processing by WelcomeController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `collected_coins` WHERE (user_id = 16)[0m
+  ↳ app/controllers/welcome_controller.rb:6
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 16 AND monster_id = 2)[0m
+  ↳ app/controllers/welcome_controller.rb:7
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 16 AND monster_id = 1)[0m
+  ↳ app/controllers/welcome_controller.rb:8
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `deaths` WHERE (user_id = 16)[0m
+  ↳ app/controllers/welcome_controller.rb:9
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (51.6ms)
+Completed 200 OK in 120ms (Views: 114.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/welcome/moeda" for 127.0.0.1 at 2019-09-26 22:47:10 -0300
+Processing by WelcomeController#moeda as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` DESC LIMIT 1[0m
+  ↳ app/controllers/welcome_controller.rb:52
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/welcome_controller.rb:55
+  [1m[36mCollectedCoin Create (0.4ms)[0m  [1m[32mINSERT INTO `collected_coins` (`user_id`, `value`) VALUES (16, 10)[0m
+  ↳ app/controllers/welcome_controller.rb:55
+  [1m[35m (231.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/welcome_controller.rb:55
+Redirected to http://localhost:3000/welcome/index
+Completed 302 Found in 241ms (ActiveRecord: 234.2ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2019-09-26 22:47:10 -0300
+Processing by WelcomeController#index as HTML
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `collected_coins` WHERE (user_id = 16)[0m
+  ↳ app/controllers/welcome_controller.rb:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 16 AND monster_id = 2)[0m
+  ↳ app/controllers/welcome_controller.rb:7
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 16 AND monster_id = 1)[0m
+  ↳ app/controllers/welcome_controller.rb:8
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `deaths` WHERE (user_id = 16)[0m
+  ↳ app/controllers/welcome_controller.rb:9
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (74.9ms)
+Completed 200 OK in 165ms (Views: 156.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/welcome/monstro?monster=turtle" for 127.0.0.1 at 2019-09-26 22:47:12 -0300
+Processing by WelcomeController#monstro as HTML
+  Parameters: {"monster"=>"turtle"}
+Unpermitted parameter: :monster
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` DESC LIMIT 1[0m
+  ↳ app/controllers/welcome_controller.rb:64
+  [1m[36mMonster Load (0.3ms)[0m  [1m[34mSELECT  `monsters`.* FROM `monsters` WHERE `monsters`.`name` = 'turtle' LIMIT 1[0m
+  ↳ app/controllers/welcome_controller.rb:67
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/welcome_controller.rb:75
+  [1m[36mKilledMonster Create (0.4ms)[0m  [1m[32mINSERT INTO `killed_monsters` (`user_id`, `monster_id`) VALUES (16, 1)[0m
+  ↳ app/controllers/welcome_controller.rb:75
+  [1m[35m (169.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/welcome_controller.rb:75
+Redirected to http://localhost:3000/welcome/index
+Completed 302 Found in 337ms (ActiveRecord: 205.5ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2019-09-26 22:47:13 -0300
+Processing by WelcomeController#index as HTML
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `collected_coins` WHERE (user_id = 16)[0m
+  ↳ app/controllers/welcome_controller.rb:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 16 AND monster_id = 2)[0m
+  ↳ app/controllers/welcome_controller.rb:7
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 16 AND monster_id = 1)[0m
+  ↳ app/controllers/welcome_controller.rb:8
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `deaths` WHERE (user_id = 16)[0m
+  ↳ app/controllers/welcome_controller.rb:9
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (67.5ms)
+Completed 200 OK in 132ms (Views: 123.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/welcome/monstro?monster=bowser" for 127.0.0.1 at 2019-09-26 22:47:15 -0300
+Processing by WelcomeController#monstro as HTML
+  Parameters: {"monster"=>"bowser"}
+Unpermitted parameter: :monster
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` DESC LIMIT 1[0m
+  ↳ app/controllers/welcome_controller.rb:64
+  [1m[36mMonster Load (0.4ms)[0m  [1m[34mSELECT  `monsters`.* FROM `monsters` WHERE `monsters`.`name` = 'bowser' LIMIT 1[0m
+  ↳ app/controllers/welcome_controller.rb:67
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/welcome_controller.rb:75
+  [1m[36mKilledMonster Create (0.5ms)[0m  [1m[32mINSERT INTO `killed_monsters` (`user_id`, `monster_id`) VALUES (16, 2)[0m
+  ↳ app/controllers/welcome_controller.rb:75
+  [1m[35m (47.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/welcome_controller.rb:75
+Redirected to http://localhost:3000/welcome/index
+Completed 302 Found in 58ms (ActiveRecord: 49.0ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2019-09-26 22:47:15 -0300
+Processing by WelcomeController#index as HTML
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `collected_coins` WHERE (user_id = 16)[0m
+  ↳ app/controllers/welcome_controller.rb:6
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 16 AND monster_id = 2)[0m
+  ↳ app/controllers/welcome_controller.rb:7
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 16 AND monster_id = 1)[0m
+  ↳ app/controllers/welcome_controller.rb:8
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `deaths` WHERE (user_id = 16)[0m
+  ↳ app/controllers/welcome_controller.rb:9
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (55.9ms)
+Completed 200 OK in 125ms (Views: 115.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/welcome/moeda" for 127.0.0.1 at 2019-09-26 22:47:17 -0300
+Processing by WelcomeController#moeda as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` DESC LIMIT 1[0m
+  ↳ app/controllers/welcome_controller.rb:52
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/welcome_controller.rb:55
+  [1m[36mCollectedCoin Create (0.6ms)[0m  [1m[32mINSERT INTO `collected_coins` (`user_id`, `value`) VALUES (16, 10)[0m
+  ↳ app/controllers/welcome_controller.rb:55
+  [1m[35m (52.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/welcome_controller.rb:55
+Redirected to http://localhost:3000/welcome/index
+Completed 302 Found in 59ms (ActiveRecord: 53.3ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2019-09-26 22:47:18 -0300
+Processing by WelcomeController#index as HTML
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `collected_coins` WHERE (user_id = 16)[0m
+  ↳ app/controllers/welcome_controller.rb:6
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 16 AND monster_id = 2)[0m
+  ↳ app/controllers/welcome_controller.rb:7
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 16 AND monster_id = 1)[0m
+  ↳ app/controllers/welcome_controller.rb:8
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `deaths` WHERE (user_id = 16)[0m
+  ↳ app/controllers/welcome_controller.rb:9
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (66.9ms)
+Completed 200 OK in 138ms (Views: 125.1ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/welcome/morte" for 127.0.0.1 at 2019-09-26 22:47:20 -0300
+Processing by WelcomeController#morte as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` DESC LIMIT 1[0m
+  ↳ app/controllers/welcome_controller.rb:85
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/welcome_controller.rb:87
+  [1m[36mDeath Create (0.5ms)[0m  [1m[32mINSERT INTO `deaths` (`user_id`, `created_at`, `updated_at`) VALUES (16, '2019-09-27 01:47:20', '2019-09-27 01:47:20')[0m
+  ↳ app/controllers/welcome_controller.rb:87
+  [1m[35m (174.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/welcome_controller.rb:87
+Redirected to http://localhost:3000/welcome/index
+Completed 302 Found in 191ms (ActiveRecord: 176.9ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2019-09-26 22:47:20 -0300
+Processing by WelcomeController#index as HTML
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `collected_coins` WHERE (user_id = 16)[0m
+  ↳ app/controllers/welcome_controller.rb:6
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 16 AND monster_id = 2)[0m
+  ↳ app/controllers/welcome_controller.rb:7
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 16 AND monster_id = 1)[0m
+  ↳ app/controllers/welcome_controller.rb:8
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `deaths` WHERE (user_id = 16)[0m
+  ↳ app/controllers/welcome_controller.rb:9
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (86.9ms)
+Completed 200 OK in 181ms (Views: 171.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/welcome/morte" for 127.0.0.1 at 2019-09-26 22:47:25 -0300
+Processing by WelcomeController#morte as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` DESC LIMIT 1[0m
+  ↳ app/controllers/welcome_controller.rb:85
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/welcome_controller.rb:87
+  [1m[36mDeath Create (1.1ms)[0m  [1m[32mINSERT INTO `deaths` (`user_id`, `created_at`, `updated_at`) VALUES (16, '2019-09-27 01:47:25', '2019-09-27 01:47:25')[0m
+  ↳ app/controllers/welcome_controller.rb:87
+  [1m[35m (45.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/welcome_controller.rb:87
+Redirected to http://localhost:3000/welcome/index
+Completed 302 Found in 55ms (ActiveRecord: 47.5ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2019-09-26 22:47:25 -0300
+Processing by WelcomeController#index as HTML
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `collected_coins` WHERE (user_id = 16)[0m
+  ↳ app/controllers/welcome_controller.rb:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 16 AND monster_id = 2)[0m
+  ↳ app/controllers/welcome_controller.rb:7
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 16 AND monster_id = 1)[0m
+  ↳ app/controllers/welcome_controller.rb:8
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `deaths` WHERE (user_id = 16)[0m
+  ↳ app/controllers/welcome_controller.rb:9
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (82.7ms)
+Completed 200 OK in 190ms (Views: 181.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/welcome/morte" for 127.0.0.1 at 2019-09-26 22:47:26 -0300
+Processing by WelcomeController#morte as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` DESC LIMIT 1[0m
+  ↳ app/controllers/welcome_controller.rb:85
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/welcome_controller.rb:87
+  [1m[36mDeath Create (0.4ms)[0m  [1m[32mINSERT INTO `deaths` (`user_id`, `created_at`, `updated_at`) VALUES (16, '2019-09-27 01:47:26', '2019-09-27 01:47:26')[0m
+  ↳ app/controllers/welcome_controller.rb:87
+  [1m[35m (57.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/welcome_controller.rb:87
+Redirected to http://localhost:3000/welcome/index
+Completed 302 Found in 65ms (ActiveRecord: 59.0ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2019-09-26 22:47:26 -0300
+Processing by WelcomeController#index as HTML
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `collected_coins` WHERE (user_id = 16)[0m
+  ↳ app/controllers/welcome_controller.rb:6
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 16 AND monster_id = 2)[0m
+  ↳ app/controllers/welcome_controller.rb:7
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 16 AND monster_id = 1)[0m
+  ↳ app/controllers/welcome_controller.rb:8
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `deaths` WHERE (user_id = 16)[0m
+  ↳ app/controllers/welcome_controller.rb:9
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (85.8ms)
+Completed 200 OK in 185ms (Views: 173.1ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/welcome/morte" for 127.0.0.1 at 2019-09-26 22:47:27 -0300
+Processing by WelcomeController#morte as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` DESC LIMIT 1[0m
+  ↳ app/controllers/welcome_controller.rb:85
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/welcome_controller.rb:87
+  [1m[36mDeath Create (2.1ms)[0m  [1m[32mINSERT INTO `deaths` (`user_id`, `created_at`, `updated_at`) VALUES (16, '2019-09-27 01:47:27', '2019-09-27 01:47:27')[0m
+  ↳ app/controllers/welcome_controller.rb:87
+  [1m[35m (26.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/welcome_controller.rb:87
+Redirected to http://localhost:3000/welcome/index
+Completed 302 Found in 36ms (ActiveRecord: 29.1ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2019-09-26 22:47:28 -0300
+Processing by WelcomeController#index as HTML
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `collected_coins` WHERE (user_id = 16)[0m
+  ↳ app/controllers/welcome_controller.rb:6
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 16 AND monster_id = 2)[0m
+  ↳ app/controllers/welcome_controller.rb:7
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 16 AND monster_id = 1)[0m
+  ↳ app/controllers/welcome_controller.rb:8
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `deaths` WHERE (user_id = 16)[0m
+  ↳ app/controllers/welcome_controller.rb:9
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (98.8ms)
+Completed 200 OK in 188ms (Views: 176.9ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/welcome/morte" for 127.0.0.1 at 2019-09-26 22:47:28 -0300
+Processing by WelcomeController#morte as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` DESC LIMIT 1[0m
+  ↳ app/controllers/welcome_controller.rb:85
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/welcome_controller.rb:87
+  [1m[36mDeath Create (0.5ms)[0m  [1m[32mINSERT INTO `deaths` (`user_id`, `created_at`, `updated_at`) VALUES (16, '2019-09-27 01:47:28', '2019-09-27 01:47:28')[0m
+  ↳ app/controllers/welcome_controller.rb:87
+  [1m[35m (71.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/welcome_controller.rb:87
+Redirected to http://localhost:3000/welcome/index
+Completed 302 Found in 86ms (ActiveRecord: 73.9ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2019-09-26 22:47:29 -0300
+Processing by WelcomeController#index as HTML
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `collected_coins` WHERE (user_id = 16)[0m
+  ↳ app/controllers/welcome_controller.rb:6
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 16 AND monster_id = 2)[0m
+  ↳ app/controllers/welcome_controller.rb:7
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 16 AND monster_id = 1)[0m
+  ↳ app/controllers/welcome_controller.rb:8
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `deaths` WHERE (user_id = 16)[0m
+  ↳ app/controllers/welcome_controller.rb:9
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (109.2ms)
+Completed 200 OK in 240ms (Views: 222.9ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/welcome/morte" for 127.0.0.1 at 2019-09-26 22:47:30 -0300
+Processing by WelcomeController#morte as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` DESC LIMIT 1[0m
+  ↳ app/controllers/welcome_controller.rb:85
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/welcome_controller.rb:87
+  [1m[36mDeath Create (0.4ms)[0m  [1m[32mINSERT INTO `deaths` (`user_id`, `created_at`, `updated_at`) VALUES (16, '2019-09-27 01:47:30', '2019-09-27 01:47:30')[0m
+  ↳ app/controllers/welcome_controller.rb:87
+  [1m[35m (49.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/welcome_controller.rb:87
+Redirected to http://localhost:3000/welcome/index
+Completed 302 Found in 58ms (ActiveRecord: 50.9ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2019-09-26 22:47:30 -0300
+Processing by WelcomeController#index as HTML
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `collected_coins` WHERE (user_id = 16)[0m
+  ↳ app/controllers/welcome_controller.rb:6
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 16 AND monster_id = 2)[0m
+  ↳ app/controllers/welcome_controller.rb:7
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 16 AND monster_id = 1)[0m
+  ↳ app/controllers/welcome_controller.rb:8
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `deaths` WHERE (user_id = 16)[0m
+  ↳ app/controllers/welcome_controller.rb:9
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (81.2ms)
+Completed 200 OK in 174ms (Views: 161.9ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/welcome/morte" for 127.0.0.1 at 2019-09-26 22:47:31 -0300
+Processing by WelcomeController#morte as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` DESC LIMIT 1[0m
+  ↳ app/controllers/welcome_controller.rb:85
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/welcome_controller.rb:87
+  [1m[36mDeath Create (0.3ms)[0m  [1m[32mINSERT INTO `deaths` (`user_id`, `created_at`, `updated_at`) VALUES (16, '2019-09-27 01:47:31', '2019-09-27 01:47:31')[0m
+  ↳ app/controllers/welcome_controller.rb:87
+  [1m[35m (118.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/welcome_controller.rb:87
+Redirected to http://localhost:3000/welcome/index
+Completed 302 Found in 124ms (ActiveRecord: 119.3ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2019-09-26 22:47:31 -0300
+Processing by WelcomeController#index as HTML
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `collected_coins` WHERE (user_id = 16)[0m
+  ↳ app/controllers/welcome_controller.rb:6
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 16 AND monster_id = 2)[0m
+  ↳ app/controllers/welcome_controller.rb:7
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 16 AND monster_id = 1)[0m
+  ↳ app/controllers/welcome_controller.rb:8
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `deaths` WHERE (user_id = 16)[0m
+  ↳ app/controllers/welcome_controller.rb:9
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (74.6ms)
+Completed 200 OK in 145ms (Views: 136.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/welcome/morte" for 127.0.0.1 at 2019-09-26 22:47:32 -0300
+Processing by WelcomeController#morte as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` DESC LIMIT 1[0m
+  ↳ app/controllers/welcome_controller.rb:85
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/welcome_controller.rb:87
+  [1m[36mDeath Create (1.0ms)[0m  [1m[32mINSERT INTO `deaths` (`user_id`, `created_at`, `updated_at`) VALUES (16, '2019-09-27 01:47:32', '2019-09-27 01:47:32')[0m
+  ↳ app/controllers/welcome_controller.rb:87
+  [1m[35m (67.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/welcome_controller.rb:87
+Redirected to http://localhost:3000/welcome/index
+Completed 302 Found in 75ms (ActiveRecord: 69.1ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2019-09-26 22:47:32 -0300
+Processing by WelcomeController#index as HTML
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `collected_coins` WHERE (user_id = 16)[0m
+  ↳ app/controllers/welcome_controller.rb:6
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 16 AND monster_id = 2)[0m
+  ↳ app/controllers/welcome_controller.rb:7
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 16 AND monster_id = 1)[0m
+  ↳ app/controllers/welcome_controller.rb:8
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `deaths` WHERE (user_id = 16)[0m
+  ↳ app/controllers/welcome_controller.rb:9
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (64.8ms)
+Completed 200 OK in 149ms (Views: 136.1ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/welcome/morte" for 127.0.0.1 at 2019-09-26 22:47:34 -0300
+Processing by WelcomeController#morte as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` DESC LIMIT 1[0m
+  ↳ app/controllers/welcome_controller.rb:85
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/welcome_controller.rb:87
+  [1m[36mDeath Create (0.5ms)[0m  [1m[32mINSERT INTO `deaths` (`user_id`, `created_at`, `updated_at`) VALUES (16, '2019-09-27 01:47:34', '2019-09-27 01:47:34')[0m
+  ↳ app/controllers/welcome_controller.rb:87
+  [1m[35m (51.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/welcome_controller.rb:87
+Redirected to http://localhost:3000/welcome/index
+Completed 302 Found in 65ms (ActiveRecord: 53.1ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2019-09-26 22:47:34 -0300
+Processing by WelcomeController#index as HTML
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `collected_coins` WHERE (user_id = 16)[0m
+  ↳ app/controllers/welcome_controller.rb:6
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 16 AND monster_id = 2)[0m
+  ↳ app/controllers/welcome_controller.rb:7
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 16 AND monster_id = 1)[0m
+  ↳ app/controllers/welcome_controller.rb:8
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `deaths` WHERE (user_id = 16)[0m
+  ↳ app/controllers/welcome_controller.rb:9
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (92.5ms)
+Completed 200 OK in 183ms (Views: 173.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/welcome/morte" for 127.0.0.1 at 2019-09-26 22:47:36 -0300
+Processing by WelcomeController#morte as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` DESC LIMIT 1[0m
+  ↳ app/controllers/welcome_controller.rb:85
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/welcome_controller.rb:87
+  [1m[36mDeath Create (1.2ms)[0m  [1m[32mINSERT INTO `deaths` (`user_id`, `created_at`, `updated_at`) VALUES (16, '2019-09-27 01:47:36', '2019-09-27 01:47:36')[0m
+  ↳ app/controllers/welcome_controller.rb:87
+  [1m[35m (60.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/welcome_controller.rb:87
+Redirected to http://localhost:3000/welcome/index
+Completed 302 Found in 68ms (ActiveRecord: 62.4ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2019-09-26 22:47:36 -0300
+Processing by WelcomeController#index as HTML
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `collected_coins` WHERE (user_id = 16)[0m
+  ↳ app/controllers/welcome_controller.rb:6
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 16 AND monster_id = 2)[0m
+  ↳ app/controllers/welcome_controller.rb:7
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 16 AND monster_id = 1)[0m
+  ↳ app/controllers/welcome_controller.rb:8
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `deaths` WHERE (user_id = 16)[0m
+  ↳ app/controllers/welcome_controller.rb:9
+Redirected to http://localhost:3000/user/index
+Completed 302 Found in 9ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/user/index" for 127.0.0.1 at 2019-09-26 22:47:36 -0300
+Processing by UserController#index as HTML
+  Rendering user/index.html.erb within layouts/application
+  Rendered user/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 102ms (Views: 100.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/index" for 127.0.0.1 at 2019-09-26 22:48:39 -0300
+Processing by UserController#index as HTML
+  Rendering user/index.html.erb within layouts/application
+  Rendered user/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 62ms (Views: 60.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user/create" for 127.0.0.1 at 2019-09-26 22:48:42 -0300
+Processing by UserController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Q4QMvSbb9u3x8JLsK12rE1yCEBCng32PlXOq1Deddz6ayaQX0aJrLB7Zk623Ah1h47FhenVkCPo039+nc26rgA==", "nome"=>"Luks", "commit"=>"Entrar"}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_controller.rb:9
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` VALUES ()[0m
+  ↳ app/controllers/user_controller.rb:9
+  [1m[35m (69.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_controller.rb:9
+Redirected to http://localhost:3000/welcome/index
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` DESC LIMIT 1[0m
+  ↳ app/controllers/user_controller.rb:15
+Completed 302 Found in 81ms (ActiveRecord: 71.1ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2019-09-26 22:48:42 -0300
+Processing by WelcomeController#index as HTML
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `collected_coins` WHERE (user_id = 17)[0m
+  ↳ app/controllers/welcome_controller.rb:6
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 17 AND monster_id = 2)[0m
+  ↳ app/controllers/welcome_controller.rb:7
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 17 AND monster_id = 1)[0m
+  ↳ app/controllers/welcome_controller.rb:8
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `deaths` WHERE (user_id = 17)[0m
+  ↳ app/controllers/welcome_controller.rb:9
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (61.2ms)
+Completed 200 OK in 132ms (Views: 124.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/welcome/moeda" for 127.0.0.1 at 2019-09-26 22:48:46 -0300
+Processing by WelcomeController#moeda as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` DESC LIMIT 1[0m
+  ↳ app/controllers/welcome_controller.rb:52
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/welcome_controller.rb:55
+  [1m[36mCollectedCoin Create (0.7ms)[0m  [1m[32mINSERT INTO `collected_coins` (`user_id`, `value`) VALUES (17, 10)[0m
+  ↳ app/controllers/welcome_controller.rb:55
+  [1m[35m (49.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/welcome_controller.rb:55
+Redirected to http://localhost:3000/welcome/index
+Completed 302 Found in 61ms (ActiveRecord: 50.7ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2019-09-26 22:48:47 -0300
+Processing by WelcomeController#index as HTML
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `collected_coins` WHERE (user_id = 17)[0m
+  ↳ app/controllers/welcome_controller.rb:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 17 AND monster_id = 2)[0m
+  ↳ app/controllers/welcome_controller.rb:7
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 17 AND monster_id = 1)[0m
+  ↳ app/controllers/welcome_controller.rb:8
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `deaths` WHERE (user_id = 17)[0m
+  ↳ app/controllers/welcome_controller.rb:9
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (61.5ms)
+Completed 200 OK in 121ms (Views: 113.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/welcome/monstro?monster=bowser" for 127.0.0.1 at 2019-09-26 22:48:48 -0300
+Processing by WelcomeController#monstro as HTML
+  Parameters: {"monster"=>"bowser"}
+Unpermitted parameter: :monster
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` DESC LIMIT 1[0m
+  ↳ app/controllers/welcome_controller.rb:64
+  [1m[36mMonster Load (0.8ms)[0m  [1m[34mSELECT  `monsters`.* FROM `monsters` WHERE `monsters`.`name` = 'bowser' LIMIT 1[0m
+  ↳ app/controllers/welcome_controller.rb:67
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/welcome_controller.rb:75
+  [1m[36mKilledMonster Create (0.4ms)[0m  [1m[32mINSERT INTO `killed_monsters` (`user_id`, `monster_id`) VALUES (17, 2)[0m
+  ↳ app/controllers/welcome_controller.rb:75
+  [1m[35m (27.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/welcome_controller.rb:75
+Redirected to http://localhost:3000/welcome/index
+Completed 302 Found in 43ms (ActiveRecord: 29.9ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2019-09-26 22:48:48 -0300
+Processing by WelcomeController#index as HTML
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `collected_coins` WHERE (user_id = 17)[0m
+  ↳ app/controllers/welcome_controller.rb:6
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 17 AND monster_id = 2)[0m
+  ↳ app/controllers/welcome_controller.rb:7
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 17 AND monster_id = 1)[0m
+  ↳ app/controllers/welcome_controller.rb:8
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT COUNT(*) FROM `deaths` WHERE (user_id = 17)[0m
+  ↳ app/controllers/welcome_controller.rb:9
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (82.3ms)
+Completed 200 OK in 186ms (Views: 174.6ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/welcome/monstro?monster=turtle" for 127.0.0.1 at 2019-09-26 22:48:50 -0300
+Processing by WelcomeController#monstro as HTML
+  Parameters: {"monster"=>"turtle"}
+Unpermitted parameter: :monster
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` DESC LIMIT 1[0m
+  ↳ app/controllers/welcome_controller.rb:64
+  [1m[36mMonster Load (0.6ms)[0m  [1m[34mSELECT  `monsters`.* FROM `monsters` WHERE `monsters`.`name` = 'turtle' LIMIT 1[0m
+  ↳ app/controllers/welcome_controller.rb:67
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/welcome_controller.rb:75
+  [1m[36mKilledMonster Create (1.8ms)[0m  [1m[32mINSERT INTO `killed_monsters` (`user_id`, `monster_id`) VALUES (17, 1)[0m
+  ↳ app/controllers/welcome_controller.rb:75
+  [1m[35m (63.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/welcome_controller.rb:75
+Redirected to http://localhost:3000/welcome/index
+Completed 302 Found in 76ms (ActiveRecord: 66.6ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2019-09-26 22:48:50 -0300
+Processing by WelcomeController#index as HTML
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `collected_coins` WHERE (user_id = 17)[0m
+  ↳ app/controllers/welcome_controller.rb:6
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 17 AND monster_id = 2)[0m
+  ↳ app/controllers/welcome_controller.rb:7
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 17 AND monster_id = 1)[0m
+  ↳ app/controllers/welcome_controller.rb:8
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `deaths` WHERE (user_id = 17)[0m
+  ↳ app/controllers/welcome_controller.rb:9
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (51.3ms)
+Completed 200 OK in 114ms (Views: 105.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2019-09-26 22:51:09 -0300
+Processing by WelcomeController#index as HTML
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `collected_coins` WHERE (user_id = 17)[0m
+  ↳ app/controllers/welcome_controller.rb:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 17 AND monster_id = 2)[0m
+  ↳ app/controllers/welcome_controller.rb:7
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 17 AND monster_id = 1)[0m
+  ↳ app/controllers/welcome_controller.rb:8
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `deaths` WHERE (user_id = 17)[0m
+  ↳ app/controllers/welcome_controller.rb:9
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (79.3ms)
+Completed 200 OK in 186ms (Views: 159.5ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/welcome/morte" for 127.0.0.1 at 2019-09-26 22:51:56 -0300
+Processing by WelcomeController#morte as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` DESC LIMIT 1[0m
+  ↳ app/controllers/welcome_controller.rb:85
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/welcome_controller.rb:87
+  [1m[36mDeath Create (0.3ms)[0m  [1m[32mINSERT INTO `deaths` (`user_id`, `created_at`, `updated_at`) VALUES (17, '2019-09-27 01:51:56', '2019-09-27 01:51:56')[0m
+  ↳ app/controllers/welcome_controller.rb:87
+  [1m[35m (31.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/welcome_controller.rb:87
+Redirected to http://localhost:3000/welcome/index
+Completed 302 Found in 85ms (ActiveRecord: 36.2ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2019-09-26 22:51:56 -0300
+Processing by WelcomeController#index as HTML
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `collected_coins` WHERE (user_id = 17)[0m
+  ↳ app/controllers/welcome_controller.rb:6
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 17 AND monster_id = 2)[0m
+  ↳ app/controllers/welcome_controller.rb:7
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 17 AND monster_id = 1)[0m
+  ↳ app/controllers/welcome_controller.rb:8
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `deaths` WHERE (user_id = 17)[0m
+  ↳ app/controllers/welcome_controller.rb:9
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (111.1ms)
+Completed 200 OK in 208ms (Views: 196.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/welcome/morte" for 127.0.0.1 at 2019-09-26 22:51:59 -0300
+Processing by WelcomeController#morte as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` DESC LIMIT 1[0m
+  ↳ app/controllers/welcome_controller.rb:85
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/welcome_controller.rb:87
+  [1m[36mDeath Create (0.5ms)[0m  [1m[32mINSERT INTO `deaths` (`user_id`, `created_at`, `updated_at`) VALUES (17, '2019-09-27 01:51:59', '2019-09-27 01:51:59')[0m
+  ↳ app/controllers/welcome_controller.rb:87
+  [1m[35m (29.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/welcome_controller.rb:87
+Redirected to http://localhost:3000/welcome/index
+Completed 302 Found in 38ms (ActiveRecord: 31.9ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2019-09-26 22:51:59 -0300
+Processing by WelcomeController#index as HTML
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `collected_coins` WHERE (user_id = 17)[0m
+  ↳ app/controllers/welcome_controller.rb:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 17 AND monster_id = 2)[0m
+  ↳ app/controllers/welcome_controller.rb:7
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 17 AND monster_id = 1)[0m
+  ↳ app/controllers/welcome_controller.rb:8
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `deaths` WHERE (user_id = 17)[0m
+  ↳ app/controllers/welcome_controller.rb:9
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (69.7ms)
+Completed 200 OK in 154ms (Views: 145.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/welcome/morte" for 127.0.0.1 at 2019-09-26 22:52:00 -0300
+Processing by WelcomeController#morte as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` DESC LIMIT 1[0m
+  ↳ app/controllers/welcome_controller.rb:85
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/welcome_controller.rb:87
+  [1m[36mDeath Create (11.0ms)[0m  [1m[32mINSERT INTO `deaths` (`user_id`, `created_at`, `updated_at`) VALUES (17, '2019-09-27 01:52:00', '2019-09-27 01:52:00')[0m
+  ↳ app/controllers/welcome_controller.rb:87
+  [1m[35m (57.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/welcome_controller.rb:87
+Redirected to http://localhost:3000/welcome/index
+Completed 302 Found in 76ms (ActiveRecord: 69.3ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2019-09-26 22:52:00 -0300
+Processing by WelcomeController#index as HTML
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `collected_coins` WHERE (user_id = 17)[0m
+  ↳ app/controllers/welcome_controller.rb:6
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 17 AND monster_id = 2)[0m
+  ↳ app/controllers/welcome_controller.rb:7
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 17 AND monster_id = 1)[0m
+  ↳ app/controllers/welcome_controller.rb:8
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `deaths` WHERE (user_id = 17)[0m
+  ↳ app/controllers/welcome_controller.rb:9
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (62.7ms)
+Completed 200 OK in 141ms (Views: 132.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/welcome/morte" for 127.0.0.1 at 2019-09-26 22:52:02 -0300
+Processing by WelcomeController#morte as HTML
+  [1m[36mUser Load (7.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` DESC LIMIT 1[0m
+  ↳ app/controllers/welcome_controller.rb:85
+  [1m[35m (5.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/welcome_controller.rb:87
+  [1m[36mDeath Create (2.2ms)[0m  [1m[32mINSERT INTO `deaths` (`user_id`, `created_at`, `updated_at`) VALUES (17, '2019-09-27 01:52:02', '2019-09-27 01:52:02')[0m
+  ↳ app/controllers/welcome_controller.rb:87
+  [1m[35m (52.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/welcome_controller.rb:87
+Redirected to http://localhost:3000/welcome/index
+Completed 302 Found in 80ms (ActiveRecord: 67.3ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2019-09-26 22:52:03 -0300
+Processing by WelcomeController#index as HTML
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `collected_coins` WHERE (user_id = 17)[0m
+  ↳ app/controllers/welcome_controller.rb:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 17 AND monster_id = 2)[0m
+  ↳ app/controllers/welcome_controller.rb:7
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 17 AND monster_id = 1)[0m
+  ↳ app/controllers/welcome_controller.rb:8
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `deaths` WHERE (user_id = 17)[0m
+  ↳ app/controllers/welcome_controller.rb:9
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (71.5ms)
+Completed 200 OK in 157ms (Views: 148.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/welcome/moeda" for 127.0.0.1 at 2019-09-26 22:52:04 -0300
+Processing by WelcomeController#moeda as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` DESC LIMIT 1[0m
+  ↳ app/controllers/welcome_controller.rb:52
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/welcome_controller.rb:55
+  [1m[36mCollectedCoin Create (0.5ms)[0m  [1m[32mINSERT INTO `collected_coins` (`user_id`, `value`) VALUES (17, 10)[0m
+  ↳ app/controllers/welcome_controller.rb:55
+  [1m[35m (34.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/welcome_controller.rb:55
+Redirected to http://localhost:3000/welcome/index
+Completed 302 Found in 52ms (ActiveRecord: 36.3ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2019-09-26 22:52:04 -0300
+Processing by WelcomeController#index as HTML
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `collected_coins` WHERE (user_id = 17)[0m
+  ↳ app/controllers/welcome_controller.rb:6
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 17 AND monster_id = 2)[0m
+  ↳ app/controllers/welcome_controller.rb:7
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 17 AND monster_id = 1)[0m
+  ↳ app/controllers/welcome_controller.rb:8
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `deaths` WHERE (user_id = 17)[0m
+  ↳ app/controllers/welcome_controller.rb:9
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (84.3ms)
+Completed 200 OK in 163ms (Views: 154.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/welcome/morte" for 127.0.0.1 at 2019-09-26 22:52:06 -0300
+Processing by WelcomeController#morte as HTML
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` DESC LIMIT 1[0m
+  ↳ app/controllers/welcome_controller.rb:85
+  [1m[35m (3.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/welcome_controller.rb:87
+  [1m[36mDeath Create (1.5ms)[0m  [1m[32mINSERT INTO `deaths` (`user_id`, `created_at`, `updated_at`) VALUES (17, '2019-09-27 01:52:06', '2019-09-27 01:52:06')[0m
+  ↳ app/controllers/welcome_controller.rb:87
+  [1m[35m (67.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/welcome_controller.rb:87
+Redirected to http://localhost:3000/welcome/index
+Completed 302 Found in 82ms (ActiveRecord: 74.6ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2019-09-26 22:52:06 -0300
+Processing by WelcomeController#index as HTML
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `collected_coins` WHERE (user_id = 17)[0m
+  ↳ app/controllers/welcome_controller.rb:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 17 AND monster_id = 2)[0m
+  ↳ app/controllers/welcome_controller.rb:7
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 17 AND monster_id = 1)[0m
+  ↳ app/controllers/welcome_controller.rb:8
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `deaths` WHERE (user_id = 17)[0m
+  ↳ app/controllers/welcome_controller.rb:9
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (61.8ms)
+Completed 200 OK in 135ms (Views: 126.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/welcome/morte" for 127.0.0.1 at 2019-09-26 22:52:08 -0300
+Processing by WelcomeController#morte as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` DESC LIMIT 1[0m
+  ↳ app/controllers/welcome_controller.rb:85
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/welcome_controller.rb:87
+  [1m[36mDeath Create (0.7ms)[0m  [1m[32mINSERT INTO `deaths` (`user_id`, `created_at`, `updated_at`) VALUES (17, '2019-09-27 01:52:08', '2019-09-27 01:52:08')[0m
+  ↳ app/controllers/welcome_controller.rb:87
+  [1m[35m (110.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/welcome_controller.rb:87
+Redirected to http://localhost:3000/welcome/index
+Completed 302 Found in 123ms (ActiveRecord: 112.8ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2019-09-26 22:52:08 -0300
+Processing by WelcomeController#index as HTML
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `collected_coins` WHERE (user_id = 17)[0m
+  ↳ app/controllers/welcome_controller.rb:6
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 17 AND monster_id = 2)[0m
+  ↳ app/controllers/welcome_controller.rb:7
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 17 AND monster_id = 1)[0m
+  ↳ app/controllers/welcome_controller.rb:8
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `deaths` WHERE (user_id = 17)[0m
+  ↳ app/controllers/welcome_controller.rb:9
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (93.3ms)
+Completed 200 OK in 174ms (Views: 162.4ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/welcome/morte" for 127.0.0.1 at 2019-09-26 22:52:10 -0300
+Processing by WelcomeController#morte as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` DESC LIMIT 1[0m
+  ↳ app/controllers/welcome_controller.rb:85
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/welcome_controller.rb:87
+  [1m[36mDeath Create (2.8ms)[0m  [1m[32mINSERT INTO `deaths` (`user_id`, `created_at`, `updated_at`) VALUES (17, '2019-09-27 01:52:10', '2019-09-27 01:52:10')[0m
+  ↳ app/controllers/welcome_controller.rb:87
+  [1m[35m (65.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/welcome_controller.rb:87
+Redirected to http://localhost:3000/welcome/index
+Completed 302 Found in 80ms (ActiveRecord: 70.0ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2019-09-26 22:52:10 -0300
+Processing by WelcomeController#index as HTML
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM `collected_coins` WHERE (user_id = 17)[0m
+  ↳ app/controllers/welcome_controller.rb:6
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 17 AND monster_id = 2)[0m
+  ↳ app/controllers/welcome_controller.rb:7
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 17 AND monster_id = 1)[0m
+  ↳ app/controllers/welcome_controller.rb:8
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `deaths` WHERE (user_id = 17)[0m
+  ↳ app/controllers/welcome_controller.rb:9
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (66.7ms)
+Completed 200 OK in 124ms (Views: 115.9ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/welcome/morte" for 127.0.0.1 at 2019-09-26 22:52:12 -0300
+Processing by WelcomeController#morte as HTML
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` DESC LIMIT 1[0m
+  ↳ app/controllers/welcome_controller.rb:85
+  [1m[35m (1.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/welcome_controller.rb:87
+  [1m[36mDeath Create (0.5ms)[0m  [1m[32mINSERT INTO `deaths` (`user_id`, `created_at`, `updated_at`) VALUES (17, '2019-09-27 01:52:12', '2019-09-27 01:52:12')[0m
+  ↳ app/controllers/welcome_controller.rb:87
+  [1m[35m (74.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/welcome_controller.rb:87
+Redirected to http://localhost:3000/welcome/index
+Completed 302 Found in 95ms (ActiveRecord: 79.0ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2019-09-26 22:52:12 -0300
+Processing by WelcomeController#index as HTML
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `collected_coins` WHERE (user_id = 17)[0m
+  ↳ app/controllers/welcome_controller.rb:6
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 17 AND monster_id = 2)[0m
+  ↳ app/controllers/welcome_controller.rb:7
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 17 AND monster_id = 1)[0m
+  ↳ app/controllers/welcome_controller.rb:8
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `deaths` WHERE (user_id = 17)[0m
+  ↳ app/controllers/welcome_controller.rb:9
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (75.5ms)
+Completed 200 OK in 184ms (Views: 174.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/welcome/morte" for 127.0.0.1 at 2019-09-26 22:52:13 -0300
+Processing by WelcomeController#morte as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` DESC LIMIT 1[0m
+  ↳ app/controllers/welcome_controller.rb:85
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/welcome_controller.rb:87
+  [1m[36mDeath Create (0.7ms)[0m  [1m[32mINSERT INTO `deaths` (`user_id`, `created_at`, `updated_at`) VALUES (17, '2019-09-27 01:52:13', '2019-09-27 01:52:13')[0m
+  ↳ app/controllers/welcome_controller.rb:87
+  [1m[35m (92.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/welcome_controller.rb:87
+Redirected to http://localhost:3000/welcome/index
+Completed 302 Found in 101ms (ActiveRecord: 94.5ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2019-09-26 22:52:14 -0300
+Processing by WelcomeController#index as HTML
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `collected_coins` WHERE (user_id = 17)[0m
+  ↳ app/controllers/welcome_controller.rb:6
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 17 AND monster_id = 2)[0m
+  ↳ app/controllers/welcome_controller.rb:7
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 17 AND monster_id = 1)[0m
+  ↳ app/controllers/welcome_controller.rb:8
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `deaths` WHERE (user_id = 17)[0m
+  ↳ app/controllers/welcome_controller.rb:9
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (60.3ms)
+Completed 200 OK in 132ms (Views: 124.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/welcome/morte" for 127.0.0.1 at 2019-09-26 22:52:14 -0300
+Processing by WelcomeController#morte as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` DESC LIMIT 1[0m
+  ↳ app/controllers/welcome_controller.rb:85
+  [1m[35m (11.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/welcome_controller.rb:87
+  [1m[36mDeath Create (10.0ms)[0m  [1m[32mINSERT INTO `deaths` (`user_id`, `created_at`, `updated_at`) VALUES (17, '2019-09-27 01:52:14', '2019-09-27 01:52:14')[0m
+  ↳ app/controllers/welcome_controller.rb:87
+  [1m[35m (87.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/welcome_controller.rb:87
+Redirected to http://localhost:3000/welcome/index
+Completed 302 Found in 120ms (ActiveRecord: 109.9ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2019-09-26 22:52:14 -0300
+Processing by WelcomeController#index as HTML
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `collected_coins` WHERE (user_id = 17)[0m
+  ↳ app/controllers/welcome_controller.rb:6
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 17 AND monster_id = 2)[0m
+  ↳ app/controllers/welcome_controller.rb:7
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 17 AND monster_id = 1)[0m
+  ↳ app/controllers/welcome_controller.rb:8
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `deaths` WHERE (user_id = 17)[0m
+  ↳ app/controllers/welcome_controller.rb:9
+Redirected to http://localhost:3000/user/index
+Completed 302 Found in 10ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/user/index" for 127.0.0.1 at 2019-09-26 22:52:14 -0300
+Processing by UserController#index as HTML
+  Rendering user/index.html.erb within layouts/application
+  Rendered user/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 87ms (Views: 85.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user/create" for 127.0.0.1 at 2019-09-26 22:52:20 -0300
+Processing by UserController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4XsIdR7LbPWTLcXxelE5XJ7Koh9Wqk+EhN9W7sEqZKPPCayANSwOF3v/q3AiSfnLap3gNSzAz7OFF8PjSMIjnA==", "nome"=>"a", "commit"=>"Entrar"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_controller.rb:9
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` VALUES ()[0m
+  ↳ app/controllers/user_controller.rb:9
+  [1m[35m (105.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_controller.rb:9
+Redirected to http://localhost:3000/welcome/index
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` DESC LIMIT 1[0m
+  ↳ app/controllers/user_controller.rb:15
+Completed 302 Found in 113ms (ActiveRecord: 106.4ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2019-09-26 22:52:20 -0300
+Processing by WelcomeController#index as HTML
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `collected_coins` WHERE (user_id = 18)[0m
+  ↳ app/controllers/welcome_controller.rb:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 18 AND monster_id = 2)[0m
+  ↳ app/controllers/welcome_controller.rb:7
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 18 AND monster_id = 1)[0m
+  ↳ app/controllers/welcome_controller.rb:8
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `deaths` WHERE (user_id = 18)[0m
+  ↳ app/controllers/welcome_controller.rb:9
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (93.2ms)
+Completed 200 OK in 183ms (Views: 173.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/welcome/morte" for 127.0.0.1 at 2019-09-26 22:52:23 -0300
+Processing by WelcomeController#morte as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` DESC LIMIT 1[0m
+  ↳ app/controllers/welcome_controller.rb:85
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/welcome_controller.rb:87
+  [1m[36mDeath Create (0.6ms)[0m  [1m[32mINSERT INTO `deaths` (`user_id`, `created_at`, `updated_at`) VALUES (18, '2019-09-27 01:52:23', '2019-09-27 01:52:23')[0m
+  ↳ app/controllers/welcome_controller.rb:87
+  [1m[35m (34.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/welcome_controller.rb:87
+Redirected to http://localhost:3000/welcome/index
+Completed 302 Found in 46ms (ActiveRecord: 36.0ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2019-09-26 22:52:23 -0300
+Processing by WelcomeController#index as HTML
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `collected_coins` WHERE (user_id = 18)[0m
+  ↳ app/controllers/welcome_controller.rb:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 18 AND monster_id = 2)[0m
+  ↳ app/controllers/welcome_controller.rb:7
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 18 AND monster_id = 1)[0m
+  ↳ app/controllers/welcome_controller.rb:8
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `deaths` WHERE (user_id = 18)[0m
+  ↳ app/controllers/welcome_controller.rb:9
+Redirected to http://localhost:3000/user/index
+Completed 302 Found in 10ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/user/index" for 127.0.0.1 at 2019-09-26 22:52:23 -0300
+Processing by UserController#index as HTML
+  Rendering user/index.html.erb within layouts/application
+  Rendered user/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 74ms (Views: 73.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user/create" for 127.0.0.1 at 2019-09-26 22:52:26 -0300
+Processing by UserController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"e0rySU54b2RRoI0LxRmzqGerhq3T7t+Er8FdCX0FgdxVOFa8ZZ8Nhrly44qdAXM/k/zEh6mEX7OuCcgE9O3G4w==", "nome"=>"a", "commit"=>"Entrar"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_controller.rb:9
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` VALUES ()[0m
+  ↳ app/controllers/user_controller.rb:9
+  [1m[35m (99.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_controller.rb:9
+Redirected to http://localhost:3000/welcome/index
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` DESC LIMIT 1[0m
+  ↳ app/controllers/user_controller.rb:15
+Completed 302 Found in 106ms (ActiveRecord: 100.9ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2019-09-26 22:52:26 -0300
+Processing by WelcomeController#index as HTML
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `collected_coins` WHERE (user_id = 19)[0m
+  ↳ app/controllers/welcome_controller.rb:6
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 19 AND monster_id = 2)[0m
+  ↳ app/controllers/welcome_controller.rb:7
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 19 AND monster_id = 1)[0m
+  ↳ app/controllers/welcome_controller.rb:8
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `deaths` WHERE (user_id = 19)[0m
+  ↳ app/controllers/welcome_controller.rb:9
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (104.5ms)
+Completed 200 OK in 206ms (Views: 194.9ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/welcome/moeda" for 127.0.0.1 at 2019-09-26 22:52:28 -0300
+Processing by WelcomeController#moeda as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` DESC LIMIT 1[0m
+  ↳ app/controllers/welcome_controller.rb:52
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/welcome_controller.rb:55
+  [1m[36mCollectedCoin Create (2.5ms)[0m  [1m[32mINSERT INTO `collected_coins` (`user_id`, `value`) VALUES (19, 10)[0m
+  ↳ app/controllers/welcome_controller.rb:55
+  [1m[35m (70.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/welcome_controller.rb:55
+Redirected to http://localhost:3000/welcome/index
+Completed 302 Found in 85ms (ActiveRecord: 73.8ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2019-09-26 22:52:29 -0300
+Processing by WelcomeController#index as HTML
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM `collected_coins` WHERE (user_id = 19)[0m
+  ↳ app/controllers/welcome_controller.rb:6
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 19 AND monster_id = 2)[0m
+  ↳ app/controllers/welcome_controller.rb:7
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 19 AND monster_id = 1)[0m
+  ↳ app/controllers/welcome_controller.rb:8
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `deaths` WHERE (user_id = 19)[0m
+  ↳ app/controllers/welcome_controller.rb:9
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (81.6ms)
+Completed 200 OK in 191ms (Views: 181.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/welcome/monstro?monster=bowser" for 127.0.0.1 at 2019-09-26 22:52:31 -0300
+Processing by WelcomeController#monstro as HTML
+  Parameters: {"monster"=>"bowser"}
+Unpermitted parameter: :monster
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` DESC LIMIT 1[0m
+  ↳ app/controllers/welcome_controller.rb:64
+  [1m[36mMonster Load (0.5ms)[0m  [1m[34mSELECT  `monsters`.* FROM `monsters` WHERE `monsters`.`name` = 'bowser' LIMIT 1[0m
+  ↳ app/controllers/welcome_controller.rb:67
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/welcome_controller.rb:75
+  [1m[36mKilledMonster Create (0.3ms)[0m  [1m[32mINSERT INTO `killed_monsters` (`user_id`, `monster_id`) VALUES (19, 2)[0m
+  ↳ app/controllers/welcome_controller.rb:75
+  [1m[35m (159.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/welcome_controller.rb:75
+Redirected to http://localhost:3000/welcome/index
+Completed 302 Found in 196ms (ActiveRecord: 163.0ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2019-09-26 22:52:31 -0300
+Processing by WelcomeController#index as HTML
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `collected_coins` WHERE (user_id = 19)[0m
+  ↳ app/controllers/welcome_controller.rb:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 19 AND monster_id = 2)[0m
+  ↳ app/controllers/welcome_controller.rb:7
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 19 AND monster_id = 1)[0m
+  ↳ app/controllers/welcome_controller.rb:8
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `deaths` WHERE (user_id = 19)[0m
+  ↳ app/controllers/welcome_controller.rb:9
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (47.8ms)
+Completed 200 OK in 106ms (Views: 98.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/welcome/monstro?monster=turtle" for 127.0.0.1 at 2019-09-26 22:52:36 -0300
+Processing by WelcomeController#monstro as HTML
+  Parameters: {"monster"=>"turtle"}
+Unpermitted parameter: :monster
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` DESC LIMIT 1[0m
+  ↳ app/controllers/welcome_controller.rb:64
+  [1m[36mMonster Load (0.6ms)[0m  [1m[34mSELECT  `monsters`.* FROM `monsters` WHERE `monsters`.`name` = 'turtle' LIMIT 1[0m
+  ↳ app/controllers/welcome_controller.rb:67
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/welcome_controller.rb:75
+  [1m[36mKilledMonster Create (0.5ms)[0m  [1m[32mINSERT INTO `killed_monsters` (`user_id`, `monster_id`) VALUES (19, 1)[0m
+  ↳ app/controllers/welcome_controller.rb:75
+  [1m[35m (34.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/welcome_controller.rb:75
+Redirected to http://localhost:3000/welcome/index
+Completed 302 Found in 49ms (ActiveRecord: 36.4ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2019-09-26 22:52:36 -0300
+Processing by WelcomeController#index as HTML
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `collected_coins` WHERE (user_id = 19)[0m
+  ↳ app/controllers/welcome_controller.rb:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 19 AND monster_id = 2)[0m
+  ↳ app/controllers/welcome_controller.rb:7
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(`killed_monsters`.`monster_id`) FROM `killed_monsters` WHERE (user_id = 19 AND monster_id = 1)[0m
+  ↳ app/controllers/welcome_controller.rb:8
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `deaths` WHERE (user_id = 19)[0m
+  ↳ app/controllers/welcome_controller.rb:9
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (49.9ms)
+Completed 200 OK in 120ms (Views: 104.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-09-26 22:53:23 -0300
+Processing by UserController#index as HTML
+  Rendering user/index.html.erb within layouts/application
+  Rendered user/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 74ms (Views: 72.1ms | ActiveRecord: 0.0ms)
+
+
